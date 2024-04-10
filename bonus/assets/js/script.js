@@ -3,9 +3,6 @@ let seconds = 0;
 let minutes = 0;
 let hours = 0;
 
-//* variabile dell'intervallo
-let timer;
-
 //* prendo il bottone start
 let startBtn = document.getElementById("start");
 console.log(startBtn);
@@ -32,12 +29,27 @@ startBtn.addEventListener("click", function() {
     }, 1000);
 })
 
-//* prendo il bottone reset
+//* prendo il bottone pause
 let pauseBtn = document.getElementById("pause")
 
 //*event listener
 pauseBtn.addEventListener("click", function() {
     clearInterval(timer);
     document.getElementById("start").removeAttribute("disabled");
+})
+
+//* prendo il bottone reset
+let resetBtn = document.getElementById("reset")
+resetBtn.addEventListener("click", function() {
+    clearInterval(timer);
+    document.getElementById("start").removeAttribute("disabled");
+
+    //* reset timer
+    seconds = 0;
+    minutes = 0;
+    hours = 0;
+
+    //* richiamo stampa
+    let print = timerPrint(seconds, minutes, hours);
 })
 
