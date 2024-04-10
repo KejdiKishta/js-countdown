@@ -1,12 +1,9 @@
-//* variabili cronometro
-let seconds = document.querySelector(".seconds");
-let minutes = document.querySelector("minutes");
-let hours = document.querySelector(".hours");
-
 //* valore iniziale
 seconds = 0;
 minutes = 0;
 hours = 0;
+
+
 
 //* funzione di incremento del timer
 const timer = setInterval( function() {
@@ -20,4 +17,6 @@ const timer = setInterval( function() {
         minutes = 0;
         hours++;
     }
-}, 1000)
+
+    console.log(hours, minutes, seconds);
+}, 1000);
