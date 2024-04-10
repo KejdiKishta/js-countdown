@@ -8,17 +8,24 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <audio id="myAudio" controls>
+        <source src="./assets/audio/bonusdelbonus.mp3" type="audio/mpeg">
+    </audio>
 
-    <div>
-        <span id="hours">00</span>
-        :
-        <span id="minutes">00</span>
-        :
-        <span id="seconds">00</span>
+    <div class="timer">
+        <span>
+            <span id="hours">00</span>
+            :
+            <span id="minutes">00</span>
+            :
+            <span id="seconds">00</span>
+        </span>
     </div>
-    <input type="button" value="start" id="start">
-    <input type="button" value="pause" id="pause">
-    <input type="button" value="reset" id="reset">
+    <div>
+        <input type="button" value="start" id="start" class="c-g">
+        <input type="button" value="pause" id="pause" class="c-o">
+        <input type="button" value="reset" id="reset" class="c-r">
+    </div>
     
     <!-- script -->
     <script src="./assets/js/functions.js"></script>

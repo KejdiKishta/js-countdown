@@ -1,7 +1,9 @@
+let audio = document.getElementById("myAudio");
+
 //* valore iniziale
-let seconds = 0;
-let minutes = 0;
-let hours = 0;
+let seconds = 58;
+let minutes = 59;
+let hours = 23;
 
 //* prendo il bottone start
 let startBtn = document.getElementById("start");
@@ -22,6 +24,11 @@ startBtn.addEventListener("click", function() {
         seconds = 0;
         minutes = 0;
         hours++;
+    } else {
+        clearInterval(timer);
+        document.querySelector(".timer").innerHTML = `<span class="fs-small">NOOOON TI SCORDAR MAI DI MEEEEEE, DI OGNI MIA ABITUDINEEEEE</span>`;
+        audio.play()
+        return;
     }
 
     //* richiamo stampa
