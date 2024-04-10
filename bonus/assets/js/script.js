@@ -1,9 +1,7 @@
 //* valore iniziale
-seconds = 0;
-minutes = 0;
-hours = 0;
-
-
+let seconds = 0;
+let minutes = 0;
+let hours = 0;
 
 //* funzione di incremento del timer
 const timer = setInterval( function() {
@@ -19,4 +17,7 @@ const timer = setInterval( function() {
     }
 
     console.log(hours, minutes, seconds);
+
+    //* richiamo stampa
+    let print = timerPrint(seconds, minutes, hours)
 }, 1000);
