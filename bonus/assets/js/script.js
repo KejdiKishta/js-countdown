@@ -3,8 +3,14 @@ let seconds = 0;
 let minutes = 0;
 let hours = 0;
 
-//* funzione di incremento del timer
-const timer = setInterval( function() {
+//* prendo il bottone start
+let startBtn = document.getElementById("start");
+console.log(startBtn);
+
+//* event listener
+startBtn.addEventListener("click", function() {
+    //* funzione di incremento del timer
+    const timer = setInterval( function() {
     if (seconds < 59) {
         seconds++;
     } else if (minutes < 59) {
@@ -15,9 +21,9 @@ const timer = setInterval( function() {
         minutes = 0;
         hours++;
     }
-
-    console.log(hours, minutes, seconds);
-
     //* richiamo stampa
-    let print = timerPrint(seconds, minutes, hours)
-}, 1000);
+    let print = timerPrint(seconds, minutes, hours);
+    }, 1000);
+})
+
+
