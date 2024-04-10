@@ -1,8 +1,8 @@
 //* funzione di stampa
 function timerPrint(seconds, minutes, hours) {
-    let sPrint = ""
-    let mPrint = ""
-    let hPrint = ""
+    let sPrint = "";
+    let mPrint = "";
+    let hPrint = "";
 
     if (seconds  < 10) {
         sPrint = "0" + seconds.toString();

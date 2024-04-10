@@ -9,6 +9,8 @@ console.log(startBtn);
 
 //* event listener
 startBtn.addEventListener("click", function() {
+    document.getElementById("start").setAttribute("disabled", true);
+
     //* funzione di incremento del timer
     const timer = setInterval( function() {
     if (seconds < 59) {
@@ -21,9 +23,9 @@ startBtn.addEventListener("click", function() {
         minutes = 0;
         hours++;
     }
+
     //* richiamo stampa
     let print = timerPrint(seconds, minutes, hours);
     }, 1000);
 })
-
 
